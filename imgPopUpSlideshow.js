@@ -14,10 +14,10 @@ $( document ).ready(function() {
     // });
   
     $('.ct-sliderPop-close').on('click', function() {
-      $('.sliderPop').hide();
-      $('.ct-sliderPop-container').removeClass('open');
-      $('.sliderPop').removeClass('flexslider');
-      $('.sliderPop .ct-sliderPop-container').removeClass('slides');
+      // $('.sliderPop').hide();
+      // $('.ct-sliderPop-container').removeClass('open');
+      // $('.sliderPop').removeClass('flexslider');
+      // $('.sliderPop .ct-sliderPop-container').removeClass('slides');
       window.location.href = "https://cheesy-code.github.io/1/references.html";
     });
   });
