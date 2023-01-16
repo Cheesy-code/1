@@ -18,6 +18,6 @@ $( document ).ready(function() {
       $('.ct-sliderPop-container').removeClass('open');
       $('.sliderPop').removeClass('flexslider');
       $('.sliderPop .ct-sliderPop-container').removeClass('slides');
-      window.location.href = "file:///C:/Users/Sajtosn/Documents/SecDon/1/references.html";
+      window.location.href = "https://cheesy-code.github.io/1/references.html";
     });
   });
