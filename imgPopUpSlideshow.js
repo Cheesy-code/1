@@ -80,6 +80,10 @@ for (var i = 1; i < Object.keys(Datas[id].Imgs).length+1; i++) {
   )
 
   proba.open();
+
+  $('.carousel').carousel({
+    interval: 2000
+  })
 }
 
 
