@@ -13,6 +13,7 @@
     <title>SecDon Electric</title>
 </head>
 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
@@ -69,7 +70,8 @@
                 <p class="card-text">
                     <small class="text-muted">Projekt dátuma</small>
                 </p>
-                <a href="./imgPopUpSlideshow.html" class="row justify-content-end pr-4"><button class="btn">Megnézem a képeket</button></a>
+                <a class="row justify-content-end pr-4"><button onclick="OpenSlideShow(1)" class="btn">Megnézem a
+                        képeket</button></a> <!--  href="./imgPopUpSlideshow.html" -->
             </div>
         </div>
 
@@ -81,7 +83,8 @@
                 <p class="card-text">
                     <small class="text-muted">Projekt dátuma</small>
                 </p>
-                <a href="#" class="row justify-content-end pr-4"><button class="btn">Megnézem a képeket</button></a>
+                <a href="#" class="row justify-content-end pr-4"><button onclick="OpenSlideShow(2)" class="btn">Megnézem
+                        a képeket</button></a>
             </div>
         </div>
 
@@ -137,12 +140,7 @@
             </div>
         </div>
 
-
     </div>
-
-
-
-
 
 
     <footer class="bg-light py-3">
@@ -160,9 +158,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -170,8 +167,13 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <!-- <script src="script.js"></script> -->
-    
+
+    <script src="./imgPopUpSlideshow.js"></script>
+
+
+
+   
+
 </body>
 
 </html>
