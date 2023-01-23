@@ -10,8 +10,8 @@ var uuidv4Generator = function () {
 }
 
 
-var PopupModal = function (title, body, DOMString) {
-  this.modalTitle = title;
+var PopupModal = function ( body, DOMString) {
+  // this.modalTitle = title;
   this.modalBody = body;
   this.modalDOMString = DOMString;
 }
@@ -27,7 +27,7 @@ PopupModal.prototype.open = function () {
     widget: true,
     draggable: false,
     resizable: false,
-    height: "auto",
+    height: 800,
     width: 1000,
     title: this.modalTitle,
     modal: true,
@@ -64,7 +64,7 @@ for (var i = 1; i < Object.keys(Datas[id].Imgs).length+1; i++) {
 }
 
   var proba = new PopupModal(
-    'PopUp Ablak... ',
+    // 'PopUp Ablak... ',
     slideshow.toString() +
   '</div>'+
   '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">'+
@@ -85,9 +85,6 @@ for (var i = 1; i < Object.keys(Datas[id].Imgs).length+1; i++) {
     interval: 2000
   })
 }
-
-
-
 
 
 
