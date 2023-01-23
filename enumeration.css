@@ -8,6 +8,8 @@ ul {
 }
 
 #list {
+    position: relative;
+    opacity: 0;
     color: rgb(0, 109, 0);
     /* width: 300px; */
     /* font-size: 45px; */
