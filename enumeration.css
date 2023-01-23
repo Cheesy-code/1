@@ -1,0 +1,16 @@
+ul li {
+    list-style-image: url(./img/Elektromos_piktogram.png);
+    list-style-position: outside;
+}
+
+ul {
+    margin: 100px 100px;
+}
+
+#list {
+    color: rgb(0, 109, 0);
+    /* width: 300px; */
+    /* font-size: 45px; */
+    font-family: sans-serif;
+    /* border:2px solid black; */
+}
