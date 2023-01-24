@@ -25,9 +25,9 @@ $(document).ready(function () {
             //show the results if the mail was sent or not
             var res = $.parseJSON(data);
             if (res.result === true) {
-               $('#feedback').html('your mail was sent');
+               alert('your mail was sent');
             }else {
-               $('#feedback').html('your mail was not sent');
+               alert('your mail was not sent');
             }
         });
     });
