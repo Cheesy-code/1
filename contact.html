@@ -92,23 +92,24 @@
             <div class="card">
                 <h3 class="card-header text-center">Vedd fel velünk a kapcsolatot</h3>
                 <div class="card-body">
-                    <form>
+                    <form method="post" id="emailForm" action="sendmail.php">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Név</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="név">
+                            <input type="text" name="sender_name" class="form-control" id="formGroupExampleInput"
+                                placeholder="név" required="">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Email cím</label>
-                            <input type="email" class="form-control" id="formGroupExampleInput2"
-                                placeholder="email cím">
+                            <input type="email" name="sender_email" class="form-control" id="formGroupExampleInput2"
+                                placeholder="email cím" required="">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Üzenet</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                placeholder="Írd ide az üzeneted" rows="3"></textarea>
+                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                                placeholder="Írd ide az üzeneted" rows="3" required=""></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="button" class="btn btn-outline-dark btn-lg">Küldés</button>
+                            <button type="submit" name="send" id="sendMail" class="btn btn-outline-dark btn-lg">Küldés</button>
                         </div>
                     </form>
                 </div>
@@ -119,7 +120,8 @@
     <footer class="bg-light py-3">
         <div class="container text-center">
             <h4>Partnereink:</h4>
-            <img class="mx-1" src="./img/daniella-logo-feher.png" style="height: 60px; background-color: rgb(177, 0, 0);">
+            <img class="mx-1" src="./img/daniella-logo-feher.png"
+                style="height: 60px; background-color: rgb(177, 0, 0);">
             <img class="mx-1" src="./img/szig.jpg" style="height: 60px;">
             <img class="mx-1" src="./img/volt.png" style="height: 60px;">
 
@@ -130,15 +132,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script  type="text/javascript" src="./contact.js"></script>
 </body>
 
 </html>
