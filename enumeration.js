@@ -6,5 +6,6 @@ $(document).ready(function(){
     }, 3000, function() {
 
     })
+
     //Felsorolás beúszás
 })
