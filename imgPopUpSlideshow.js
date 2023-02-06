@@ -10,49 +10,58 @@ var uuidv4Generator = function () {
 }
 
 
-var PopupModal = function ( body, DOMString) {
-  // this.modalTitle = title;
-  this.modalBody = body;
-  this.modalDOMString = DOMString;
+class PopupModal {
+  constructor(body) {
+    // this.modalTitle = title;
+    // this.modalBody = body;
+    this.modalDOMString = body;
+  }
+  open() {
+    var modal = ('<div class="general-modal-style" title=""></div>'); //
+
+    jQuery('body:last-child').append(modal);
+
+    // jQuery(this.modalDOMString).empty();
+    jQuery(this.modalDOMString).append(this.modalBody);
+    jQuery(this.modalDOMString).dialog(
+      {
+        widget: true,
+        draggable: false,
+        resizable: false,
+        height: "auto",
+        width: 400,
+        title: this.modalTitle,
+        modal: true,
+        close: function (event, ui) {
+          jQuery(this).dialog('close');
+          jQuery(this).remove();
+        }
+      }
+    );
+  }
+  close() {
+    jQuery(this.modalDOMString).dialog('close');
+    jQuery(this.modalDOMString).remove();
+  }
 }
 
-PopupModal.prototype.open = function () {
-  var modal = ('<div id="' + this.modalDOMString.substr(1) + '" class="general-modal-style" title=""></div>') //
 
-  jQuery('body:last-child').append(modal);
-
-  jQuery(this.modalDOMString).empty();
-  jQuery(this.modalDOMString).append(this.modalBody);
-  jQuery(this.modalDOMString).dialog({
-    widget: true,
-    draggable: false,
-    resizable: false,
-    height: 800,
-    width: 1000,
-    title: this.modalTitle,
-    modal: true,
-    close: function (event, ui) {
-      jQuery(this).dialog('close');
-      jQuery(this).remove();
-    }
-  });
-}
-
-PopupModal.prototype.close = function () {
-
-  jQuery(this.modalDOMString).dialog('close');
-  jQuery(this.modalDOMString).remove();
-
-}
 
 function closeModal() {
-  jQuery('.ui-dialog').remove();
-  jQuery('.ui-widget-overlay').remove();
-  // location.reload();
+//  PopupModal.prototype.close()
+//   jQuery('.ui-dialog').remove();
+//   jQuery('.ui-widget').remove();
+//   jQuery('ui-widget-content').remove();
+//   jQuery('ui-corner-all').remove();
+//   jQuery('ui-front').remove();
+//   jQuery('general-modal-style').remove();
+  location.reload();
+
+
 }
 
 function OpenSlideShow(id) {
-var slideshow = "<div id='carouselExampleControls' class='carousel slide' data-ride='carousel'><div class='carousel-inner'>";
+var slideshow = "<div id='carouselExampleControls' class='carousel slide' data-ride='carousel'><div class='carousel-inner'>"
 
 for (var i = 1; i < Object.keys(Datas[id].Imgs).length+1; i++) {
   if (i == 1) {
@@ -60,23 +69,22 @@ for (var i = 1; i < Object.keys(Datas[id].Imgs).length+1; i++) {
   } else {
     slideshow += "<div class='carousel-item'><img class='d-block w-100' src='" + Datas[id].Imgs[i] + "' alt='First slide'></div>";
   }
-  
 }
 
   var proba = new PopupModal(
     // 'PopUp Ablak... ',
     slideshow.toString() +
-  '</div>'+
-  '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">'+
+    '</div>'+
+    '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">'+
     '<span class="carousel-control-prev-icon" aria-hidden="true"></span>'+
     '<span class="sr-only">Previous</span>'+
-  '</a>'+
-  '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">'+
+    '</a>'+
+    '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">'+
     '<span class="carousel-control-next-icon" aria-hidden="true"></span>'+
     '<span class="sr-only">Next</span>'+
-  '</a>'+
-'</div>',
-    '#' + uuidv4Generator()
+    '</a>'+
+    '</div>'
+    // '#' + uuidv4Generator()
   )
 
   proba.open();
