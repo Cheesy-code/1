@@ -35,12 +35,11 @@ class PopupModal {
 
     $('.ui-dialog-titlebar').remove();
 
+    $('.carousel').carousel({
+      interval: 2000
+    })
   }
 }
-
-$('.carousel').carousel({
-  interval: 2000
-})
 
 function OpenSlideShow(id) {
   var slideshow = "<div id='carouselExampleControls' class='carousel slide' data-ride='carousel'><div class='carousel-inner'>"
