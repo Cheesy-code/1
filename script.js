@@ -13,7 +13,7 @@ const panelsData = {
     },
     3: {
         'text': "Rendezvények",
-        'img': "img/img3.avif",
+        'img': "img/szigetfestival2015-930x500-1.jpeg",
         'href': "./rendezvenyek.html"
     }
 
